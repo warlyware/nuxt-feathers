@@ -11,8 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@feathersjs/authentication": "^2.1.6",
+    "@feathersjs/authentication-oauth2": "^1.0.3",
     "express": "^4.15.3",
     "nuxt": "^1.0.0",
+    "passport-spotify": "^1.0.0",
     "vue-loader": "13.7.2",
     "winston": "^2.4.2"
   },

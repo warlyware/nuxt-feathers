@@ -41,6 +41,10 @@ module.exports = {
   modules: [
   ],
 
+  env: {
+    SPOTIFY_CLIENT_SECRET: '93ba37774689426b959a590a4db50516'
+  },
+
   /*
   ** Build configuration
   */
@@ -49,7 +53,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
