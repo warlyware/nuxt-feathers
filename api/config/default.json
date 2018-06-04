@@ -5,5 +5,30 @@
   "paginate": {
     "default": 10,
     "max": 50
-  }
+  },
+  "authentication": {
+    "secret": "7ad67ac920e285e698f34560fa26f0a2efe29d3feb31d6c28167eebb0a0c1d980b133282510f133e99a2dd1f63788b7ebd88857ab081e35f580156eea91d1e2ecc7d6dcb275e549526ba3e967ba3cc841cd7e7b90a49f6ad80f42dfa13f44c31a5c978cdd45f2c0d534c00d34d95cbe1ee15e751889a77d63ad145283dcfa0602303bef4bce44fd00bc111ea591fd5296ba51d579f0dc4ff242119686a898c340263cfe51e67b7352d400a9497e667062699203815d3c325d1dc264c04c9e42779425dde8660a65a41f5a3b8c87b7b0646f27e03c5820ab519dd6329848c8e21895db2e40d69d3ef19a80713dbdf8ceadfed11498ba4f82d9b241094c2e47b5d",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "nedb": "../data"
 }

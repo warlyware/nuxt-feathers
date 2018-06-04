@@ -11,6 +11,8 @@ const services = require('./services');
 const appHooks = require('./app.hooks');
 const channels = require('./channels');
 
+const authentication = require('./authentication');
+
 const app = express(feathers());
 
 app.configure(configuration());
@@ -21,6 +23,7 @@ app.configure(express.rest());
 app.configure(socketio());
 
 app.configure(middleware);
+app.configure(authentication);
 app.configure(services);
 app.configure(channels);
 
